@@ -1,5 +1,6 @@
 import random
 
+
 def generate_random_matrix(rows, cols):
     matrix = []
     for row in range(rows):
