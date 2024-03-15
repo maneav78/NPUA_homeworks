@@ -1,6 +1,21 @@
+import os
+
+
 def get_name():
     while True:
-        return input("Give the file name you want to open: ")
+        file_name = input("Give the file name you want to open: ")
+        if is_valid(file_name):
+            return file_name
+        else:
+            print("Please enter a valid file name.")
+
+
+def is_valid(file):
+    full_path = "./" + file
+    if os.path.exists(full_path):
+        return True
+    else:
+        return False
 
 
 file_name = get_name()
